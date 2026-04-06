@@ -6,6 +6,8 @@ RUN caddy fmt --overwrite Caddyfile
 
 FROM listmonk/listmonk:latest
 
+COPY static/ /listmonk/static/
+
 ENV LISTMONK_app__address="127.0.0.1:9000"
 
 RUN apk add --no-cache parallel openssl
@@ -14,8 +16,6 @@ COPY --from=caddy /srv/Caddyfile ./
 COPY --from=caddy /usr/bin/caddy /usr/bin/caddy
 
 COPY --chmod=755 scripts/* ./
-
-COPY static/ /listmonk/static/
 
 ENTRYPOINT ["/bin/sh"]
 
