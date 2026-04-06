@@ -1,3 +1,4 @@
+{{ define "subscriber-optin" }}
 {{ template "header" . }}
 
 <table class="body-wrap">
@@ -9,7 +10,7 @@
         <tr>
           <td style="background:linear-gradient(135deg,#1F1F1F 0%,#2D2D2D 100%);padding:32px 40px;text-align:center;border-radius:6px 6px 0 0;">
             <!-- Uncomment and replace with your logo URL:
-            <img src="https://yorubatones.com/logo.png" alt="Yorùbá Tones" width="48" height="48" style="display:block;margin:0 auto 12px;border-radius:10px;" />
+            <img src="https://yorubatones.com/logo.png" alt="Yor&#xF9;b&#xE1; Tones" width="48" height="48" style="display:block;margin:0 auto 12px;border-radius:10px;" />
             -->
             <span style="color:#ffffff;font-size:20px;font-weight:700;letter-spacing:1px;font-family:Helvetica Neue,Arial,sans-serif;">Yor&#xF9;b&#xE1; Tones</span>
           </td>
@@ -62,4 +63,5 @@
   </tr>
 </table>
 
-{{ template "footer" . }}
+{{ template "footer" }}
+{{ end }}
