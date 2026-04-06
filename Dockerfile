@@ -15,6 +15,8 @@ COPY --from=caddy /usr/bin/caddy /usr/bin/caddy
 
 COPY --chmod=755 scripts/* ./
 
+COPY static/ /listmonk/static/
+
 ENTRYPOINT ["/bin/sh"]
 
 CMD ["start.sh"]

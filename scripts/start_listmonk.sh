@@ -4,4 +4,4 @@ set -e
 
 (./listmonk --idempotent --upgrade --yes || ./listmonk --install --upgrade --yes)
 
-exec ./listmonk
+exec ./listmonk --static-dir=/listmonk/static
