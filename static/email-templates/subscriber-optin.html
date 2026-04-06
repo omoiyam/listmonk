@@ -1,80 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Confirm your subscription</title>
-</head>
-<body style="margin:0;padding:0;background-color:#F0F4F8;font-family:'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F0F4F8;padding:40px 0;">
-<tr><td align="center">
+{{ template "header" . }}
 
-  <!-- Container -->
-  <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%;background-color:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06);">
+<table class="body-wrap">
+  <tr>
+    <td class="container" style="padding:0;">
 
-    <!-- Header -->
-    <tr>
-      <td style="background:linear-gradient(135deg,#1F1F1F 0%,#2D2D2D 100%);padding:36px 40px;text-align:center;">
-        <!-- Uncomment and replace with your logo URL:
-        <img src="https://yorubatones.com/logo.png" alt="Yoruba Tones" width="48" height="48" style="display:block;margin:0 auto 12px;border-radius:12px;" />
-        -->
-        <h1 style="margin:0;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:1px;">
-          Yor&ugrave;b&aacute; Tones
-        </h1>
-      </td>
-    </tr>
-
-    <!-- Body -->
-    <tr>
-      <td style="padding:40px 40px 16px;">
-        <h2 style="margin:0 0 16px;color:#0F172A;font-size:24px;font-weight:700;line-height:1.3;">
-          Confirm your subscription
-        </h2>
-        <p style="margin:0 0 24px;color:#475569;font-size:15px;line-height:1.7;">
-          You have subscribed to marketing emails due to your interaction with Yor&ugrave;b&aacute; Tones.
-        </p>
-
-        <!-- CTA Button -->
-        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto 28px;">
+      <!-- Branded header -->
+      <table style="width:100%;border-collapse:collapse;">
         <tr>
-          <td style="border-radius:10px;background:linear-gradient(135deg,#4A7F24 0%,#66B032 100%);">
-            <a href="{{ .OptinURL }}" target="_blank" style="display:inline-block;padding:14px 36px;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;letter-spacing:0.4px;">
-              Confirm my subscription
-            </a>
+          <td style="background:linear-gradient(135deg,#1F1F1F 0%,#2D2D2D 100%);padding:32px 40px;text-align:center;border-radius:6px 6px 0 0;">
+            <!-- Uncomment and replace with your logo URL:
+            <img src="https://yorubatones.com/logo.png" alt="Yorùbá Tones" width="48" height="48" style="display:block;margin:0 auto 12px;border-radius:10px;" />
+            -->
+            <span style="color:#ffffff;font-size:20px;font-weight:700;letter-spacing:1px;font-family:Helvetica Neue,Arial,sans-serif;">Yor&#xF9;b&#xE1; Tones</span>
           </td>
         </tr>
-        </table>
+      </table>
 
-        <p style="margin:0 0 8px;color:#94A3B8;font-size:13px;line-height:1.6;">
-          Ignore this message if you did not initiate the subscription.
-        </p>
-      </td>
-    </tr>
+      <!-- Body -->
+      <table style="width:100%;border-collapse:collapse;">
+        <tr>
+          <td style="padding:36px 40px 20px;">
 
-    <!-- Divider -->
-    <tr>
-      <td style="padding:0 40px;">
-        <div style="border-top:1px solid #E2E8F0;"></div>
-      </td>
-    </tr>
+            <h3 style="margin:0 0 12px;color:#0F172A;font-size:22px;font-weight:700;">Confirm your subscription</h3>
 
-    <!-- Footer -->
-    <tr>
-      <td style="padding:20px 40px 28px;text-align:center;">
-        <p style="margin:0;color:#94A3B8;font-size:12px;line-height:1.6;">
-          If you have any questions, contact Yor&ugrave;b&aacute; Tones at
-          <a href="mailto:hello@yorubatones.com" style="color:#4A7F24;text-decoration:none;font-weight:500;">hello@yorubatones.com</a>
-        </p>
-        <p style="margin:8px 0 0;color:#CBD5E1;font-size:11px;">
-          &copy; 2026 Yor&ugrave;b&aacute; Tones. All rights reserved.
-        </p>
-      </td>
-    </tr>
+            <p style="margin:0 0 24px;color:#475569;font-size:15px;line-height:1.7;">
+              You have subscribed to marketing emails due to your interaction with Yor&#xF9;b&#xE1; Tones.
+            </p>
 
-  </table>
-  <!-- /Container -->
+            <table style="margin:0 0 28px;">
+              <tr>
+                <td style="border-radius:8px;background:#4A7F24;">
+                  <a href="{{ .OptinURL }}" class="button" style="display:inline-block;padding:13px 32px;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;font-family:Helvetica Neue,Arial,sans-serif;">
+                    Confirm my subscription
+                  </a>
+                </td>
+              </tr>
+            </table>
 
-</td></tr>
+            <p style="margin:0 0 8px;color:#94A3B8;font-size:13px;line-height:1.6;">
+              Ignore this message if you did not initiate the subscription.
+            </p>
+
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 40px 8px;">
+            <div style="border-top:1px solid #E2E8F0;"></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 40px 28px;text-align:center;">
+            <p style="margin:0;color:#94A3B8;font-size:12px;line-height:1.6;">
+              Questions? Contact us at <a href="mailto:hello@yorubatones.com" style="color:#4A7F24;text-decoration:none;">hello@yorubatones.com</a>
+            </p>
+            <p style="margin:8px 0 0;color:#CBD5E1;font-size:11px;">&copy; 2026 Yor&#xF9;b&#xE1; Tones. All rights reserved.</p>
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
 </table>
-</body>
-</html>
+
+{{ template "footer" . }}
