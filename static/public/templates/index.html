@@ -26,12 +26,8 @@
     <div class="container wrap">
 		<header class="header">
 			<div class="logo">
-				<a href="{{ if .EnablePublicSubPage }}{{ .RootURL}}/subscription/form{{ end }}">
-				{{ if ne .LogoURL "" }}
-					<img src="{{ .LogoURL }}" alt="{{ .Data.Title }}" />
-				{{ else }}
-					<img src="/public/static/logo.svg?v={{ .AssetVersion }}" alt="{{ .Data.Title }}" />
-				{{ end }}
+				<a href="https://yorubatones.com">
+					<img src="https://yorubatones.com/images/logo.png" alt="Yorùbá Tones" style="width:52px;height:52px;border-radius:10px;" />
 				</a>
 			</div>
 		</header>
@@ -40,9 +36,6 @@
 {{ define "footer" }}
 	</div>
 	
-	<footer class="container">
-		{{ L.T "public.poweredBy" }} <a target="_blank" rel="noreferrer" href="https://listmonk.app">listmonk</a>
-	</footer>
 </body>
 </html>
 {{ end }}
