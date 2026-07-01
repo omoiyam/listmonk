@@ -8,25 +8,10 @@
 
     <!--
     PERSONALIZATION VARIABLES
-    {{ .Subscriber.FirstName }}  — subscriber's first name
-    {{ .Subscriber.Name }}       — subscriber's full name
-    {{ .Subscriber.Email }}      — subscriber's email
-    {{ .Campaign.Subject }}      — campaign subject line
-
-    TRACKABLE CTA BUTTON — paste into the campaign body (HTML view)
-    wherever you want it. Edit or delete freely per campaign; it is
-    NOT part of this template, so it only appears where you paste it.
-
-    <table style="border-collapse:collapse;">
-      <tr>
-        <td style="border-radius:8px;background:#4A7F24;">
-          <a href="{{ TrackLink "https://yorubatones.com" }}"
-             style="display:inline-block;padding:13px 32px;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;border-radius:8px;background:#4A7F24;font-family:Helvetica Neue,Arial,sans-serif;">
-            Visit Yorùbá Tones
-          </a>
-        </td>
-      </tr>
-    </table>
+    Subscriber FirstName, Subscriber Name, Subscriber Email, Campaign Subject.
+    For a trackable CTA button snippet to paste into the campaign body,
+    see the project chat history / README — do not store button markup
+    in this file, some template editors render HTML found inside comments.
     -->
 
     <style>
