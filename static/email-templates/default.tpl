@@ -7,37 +7,11 @@
     <base target="_blank" />
 
     <!--
-    ╔══════════════════════════════════════════════════════════╗
-    ║  YORÙBÁ TONES — CAMPAIGN TEMPLATE                       ║
-    ╠══════════════════════════════════════════════════════════╣
-    ║  PERSONALIZATION                                         ║
-    ║  {{ .Subscriber.FirstName }}  — subscriber's first name ║
-    ║  {{ .Subscriber.Name }}       — subscriber's full name  ║
-    ║  {{ .Subscriber.Email }}      — subscriber's email      ║
-    ║  {{ .Campaign.Subject }}      — campaign subject line   ║
-    ║                                                          ║
-    ║  TRACKABLE CTA BUTTON — copy/paste into campaign body:  ║
-    ║                                                          ║
-    ║  <table style="margin:24px 0;">                         ║
-    ║    <tr>                                                  ║
-    ║      <td style="border-radius:8px;background:#4A7F24;"> ║
-    ║        <a href="{{ TrackLink "https://yorubatones.com" }}"
-    ║           style="display:inline-block;padding:13px 32px;
-    ║           color:#ffffff;font-size:15px;font-weight:600;  ║
-    ║           text-decoration:none;border-radius:8px;        ║
-    ║           background:#4A7F24;                            ║
-    ║           font-family:Helvetica Neue,Arial,sans-serif;"> ║
-    ║          Button Label                                    ║
-    ║        </a>                                              ║
-    ║      </td>                                               ║
-    ║    </tr>                                                 ║
-    ║  </table>                                               ║
-    ║                                                          ║
-    ║  NOTE: All links in campaign content are auto-tracked   ║
-    ║  when "Enable click tracking" is ON in campaign settings.║
-    ║  Use {{ TrackLink "url" }} only for links in this        ║
-    ║  template file itself.                                   ║
-    ╚══════════════════════════════════════════════════════════╝
+    PERSONALIZATION VARIABLES
+    {{ .Subscriber.FirstName }}  — subscriber's first name
+    {{ .Subscriber.Name }}       — subscriber's full name
+    {{ .Subscriber.Email }}      — subscriber's email
+    {{ .Campaign.Subject }}      — campaign subject line
     -->
 
     <style>
@@ -148,8 +122,26 @@
       <!-- Campaign content -->
       <table style="width:100%;border-collapse:collapse;">
         <tr>
-          <td class="body-cell" style="padding:8px 40px 32px;">
+          <td class="body-cell" style="padding:8px 40px 16px;">
             {{ template "content" . }}
+          </td>
+        </tr>
+      </table>
+
+      <!-- CTA Button -->
+      <table style="width:100%;border-collapse:collapse;">
+        <tr>
+          <td style="padding:8px 40px 32px;">
+            <table style="border-collapse:collapse;">
+              <tr>
+                <td style="border-radius:8px;background:#4A7F24;">
+                  <a href="{{ TrackLink "https://yorubatones.com" }}"
+                     style="display:inline-block;padding:13px 32px;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;border-radius:8px;background:#4A7F24;font-family:Helvetica Neue,Arial,sans-serif;">
+                    Visit Yorùbá Tones
+                  </a>
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
       </table>
