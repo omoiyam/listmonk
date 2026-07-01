@@ -12,6 +12,21 @@
     {{ .Subscriber.Name }}       — subscriber's full name
     {{ .Subscriber.Email }}      — subscriber's email
     {{ .Campaign.Subject }}      — campaign subject line
+
+    TRACKABLE CTA BUTTON — paste into the campaign body (HTML view)
+    wherever you want it. Edit or delete freely per campaign; it is
+    NOT part of this template, so it only appears where you paste it.
+
+    <table style="border-collapse:collapse;">
+      <tr>
+        <td style="border-radius:8px;background:#4A7F24;">
+          <a href="{{ TrackLink "https://yorubatones.com" }}"
+             style="display:inline-block;padding:13px 32px;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;border-radius:8px;background:#4A7F24;font-family:Helvetica Neue,Arial,sans-serif;">
+            Visit Yorùbá Tones
+          </a>
+        </td>
+      </tr>
+    </table>
     -->
 
     <style>
@@ -122,26 +137,8 @@
       <!-- Campaign content -->
       <table style="width:100%;border-collapse:collapse;">
         <tr>
-          <td class="body-cell" style="padding:8px 40px 16px;">
+          <td class="body-cell" style="padding:8px 40px 32px;">
             {{ template "content" . }}
-          </td>
-        </tr>
-      </table>
-
-      <!-- CTA Button -->
-      <table style="width:100%;border-collapse:collapse;">
-        <tr>
-          <td style="padding:8px 40px 32px;">
-            <table style="border-collapse:collapse;">
-              <tr>
-                <td style="border-radius:8px;background:#4A7F24;">
-                  <a href="{{ TrackLink "https://yorubatones.com" }}"
-                     style="display:inline-block;padding:13px 32px;color:#ffffff;font-size:15px;font-weight:600;text-decoration:none;border-radius:8px;background:#4A7F24;font-family:Helvetica Neue,Arial,sans-serif;">
-                    Visit Yorùbá Tones
-                  </a>
-                </td>
-              </tr>
-            </table>
           </td>
         </tr>
       </table>
